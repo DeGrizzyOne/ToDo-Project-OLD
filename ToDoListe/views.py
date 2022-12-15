@@ -4,5 +4,5 @@ from django.http import HttpResponse, HttpResponseRedirect, FileResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse('Hello World!!')
+    return render(request, 'ToDoListe/login.html', {})
 
