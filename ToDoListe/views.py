@@ -10,7 +10,7 @@ def index(request):
 
     if request.method == 'POST':
         if request.POST["operator"] == "register":
-            request_dict = request.POST
+            request_dict = request.POST.copy()
             request_dict.pop("operator")
             register_Form = UserCreationForm(request_dict)
             if register_Form.is_valid():
