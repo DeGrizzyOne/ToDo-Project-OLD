@@ -16,7 +16,8 @@
             register
             <form method="POST" action="">
             {% csrf_token %}
-                {{ registerForm }}
+                <input type="hidden" name="operator" value="register" />
+                {{ registerForm.as_p }}
                 <button type="submit">Register</button>
             </form>
         </div>
